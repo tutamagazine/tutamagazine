@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUTA Magazine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* --- General Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; color: #222; line-height: 1.6; background: #fefcf8; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* --- Hero Section --- */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+    .hero .btn {
+      padding: 0.8rem 2rem;
+      background: #6caf5f;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero .btn:hover { background: #54884a; }
+
+    /* --- Section Styles --- */
+    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; color: #333; }
+    p { margin-bottom: 1rem; }
+
+    /* --- About Section --- */
+    .about { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+    .about-text { flex: 1; min-width: 300px; }
+    .about-img { flex: 1; min-width: 300px; }
+    .about-img img { border-radius: 10px; }
+
+    /* --- Featured Stories --- */
+    .stories { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .story-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .story-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .story-card img { width: 100%; height: 200px; object-fit: cover; }
+    .story-card .story-content { padding: 15px; }
+    .story-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }
+    .story-card p { font-size: 0.9rem; color: #555; }
+
+    /* --- Action Plan --- */
+    .actions { display: flex; flex-wrap: wrap; gap: 30px; }
+    .action-card {
+      background: #e6f2e8;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 250px;
+      transition: transform 0.3s;
+    }
+    .action-card:hover { transform: translateY(-5px); }
+
+    /* --- Collaborations --- */
+    .collabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .collab-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .collab-card:hover { transform: translateY(-5px); }
+    .collab-card img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px; }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 40px 20px; background: #222; color: #fff; }
+    footer a { color: #6caf5f; margin: 0 10px; }
+    footer a:hover { color: #8fd18f; }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero p { font-size: 1.2rem; }
+      .about { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>TUTA Magazine</h1>
+    <p>Stories of people shaping a sustainable world</p>
+    <button class="btn">Explore the Magazine</button>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-text">
+      <h2>Our Vision</h2>
+      <p>TUTA Magazine brings together human stories in sustainability, blending art, science, and policy into engaging narratives. Every story highlights the people behind the actions, making sustainability personal, approachable, and inspiring.</p>
+      <p>From climate projects to fashion, community initiatives, and creative storytelling, we spotlight individuals making an impact. Our goal is to humanize sustainability — showing that every action matters and every person counts.</p>
+    </div>
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Human-centered sustainability">
+    </div>
+  </section>
+
+  <!-- Featured Stories -->
+  <section>
+    <h2>Featured Stories</h2>
+    <div class="stories">
+      <div class="story-card">
+        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" alt="Story 1">
+        <div class="story-content">
+          <h3>Anna - Urban Gardener</h3>
+          <p>Transforming abandoned spaces into vibrant community gardens that feed and educate local residents.</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Story 2">
+        <div class="story-content">
+          <h3>David - Climate Artist</h3>
+          <p>Using visual storytelling to make climate data relatable and emotionally resonant for his community.</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Story 3">
+        <div class="story-content">
+          <h3>Lina - Sustainable Fashion Innovator</h3>
+          <p>Creating eco-friendly fashion collections that combine sustainability and inclusivity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Plan -->
+  <section>
+    <h2>Our Mission & Goals</h2>
+    <div class="actions">
+      <div class="action-card">
+        <h3>Human Stories First</h3>
+        <p>Highlight the individuals behind sustainability actions, giving a human face to change.</p>
+      </div>
+      <div class="action-card">
+        <h3>Creative Storytelling</h3>
+        <p>Blend art, data visualization, and narrative design to engage and inspire readers.</p>
+      </div>
+      <div class="action-card">
+        <h3>Inclusive Platform</h3>
+        <p>Provide access to diverse stories and initiatives across the region, fostering community and collaboration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaborations / References -->
+  <section>
+    <h2>Collaborations</h2>
+    <div class="collabs">
+      <div class="collab-card">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Collaborator 1">
+        <h4>Jackson Howart</h4>
+        <p>Editor, It’s Freezing in LA! — Inspiration for branding and storytelling.</p>
+      </div>
+      <div class="collab-card">
+        <img src="https://images.unsplash.com/photo-1502764613149-7f1d229e230f?auto=format&fit=crop&w=80&q=80" alt="Collaborator 2">
+        <h4>Dilys Williams</h4>
+        <p>Centre for Sustainable Fashion — Guidance on inclusive and creative sustainability.</p>
+      </div>
+      <div class="collab-card">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&q=80" alt="Collaborator 3">
+        <h4>Alison Tickell</h4>
+        <p>Founder, Julie’s Bicycle — Connecting climate and art through creative networks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with us:</p>
+    <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a>
+    <p>&copy; 2025 TUTA Magazine. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
